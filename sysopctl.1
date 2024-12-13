@@ -1,0 +1,96 @@
+.TH sysopctl 2 XenonStack
+.TH SYSOPCTL "13" "December 2024" "sysopctl v0.1.0"
+.SH NAME
+sysopctl \- A custom command-line tool which encapsulates various command for enhancing the system administration. This Bash script that acts as a Linux command to manage system resources effectively.  
+
+.SH SYNOPSIS
+.B sysopctl
+[\-\-help | \-\-version] [command] [options]
+.SH DESCRIPTION
+.B sysopctl
+is a simple, user-friendly Linux command-line tool designed to help users manage system resources, services, processes, and monitor system health. It allows you to perform essential tasks like checking system load, managing services, viewing disk usage, analyzing system logs, and backing up files.
+
+The tool is easy to use and helps in performing administrative tasks related to system management. It is ideal for system administrators or users who want to simplify system monitoring and management as it encapsulates all the major functionalities for the ease of users.
+
+.SH COMMANDS
+.TP
+.B \-\-help
+Displays a helpful message explaining the available commands and their usage. This command is useful if you need a quick reference to understand how to use sysopctl.
+
+.TP
+.B \-\-version
+Displays the version number of the sysopctl command. 
+.TP
+.B service list
+Shows a list of all active system services. 
+
+.TP
+.B service start <service-name>
+Starts a specified system service. You need to replace `<service-name>` with the name of the service you want to start. For example, to start the Apache web server, you would use `sysopctl service start apache2`.
+
+.TP
+.B service stop <service-name>
+Stops a specified system service. Similarly to the start command, replace `<service-name>` with the name of the service you want to stop. For example, `sysopctl service stop apache2` would stop the Apache web server.
+
+.TP
+.B system load
+Displays the system load averages, showing how much load the system has experienced over the last 1, 5, and 15 minutes. It provides an indication of the system’s performance and whether it’s under heavy use.
+
+.TP
+.B disk usage
+Shows disk usage statistics for all mounted partitions. It helps you monitor the amount of space used and available on your disk, which is essential for keeping track of storage space.
+
+.TP
+.B process monitor
+Displays real-time process activity on the system. This command shows a list of running processes and their resource usage, such as CPU and memory. It helps you track which processes are consuming system resources.
+
+.TP
+.B logs analyze
+Displays the most recent critical system log entries. This command helps you identify any errors or important system messages that need attention.
+
+.TP
+.B backup <path>
+Starts a system file backup process for the specified directory path. You need to replace `<path>` with the directory you want to back up. The backup will be stored in the `/backup/` directory. For example, `sysopctl backup /home/user/` will back up files from the `/home/user/` directory.
+
+.SH EXAMPLES
+.TP
+.B sysopctl --help
+Displays the help message with instructions on how to use the tool.
+
+.TP
+.B sysopctl service list
+Lists all currently active services on your system.
+
+.TP
+.B sysopctl service start apache2
+Starts the Apache web server service.
+
+.TP
+.B sysopctl service stop apache2
+Stops the Apache web server service.
+
+.TP
+.B sysopctl system load
+Shows the current system load averages.
+
+.TP
+.B sysopctl disk usage
+Displays the disk usage for all system partitions.
+
+.TP
+.B sysopctl process monitor
+Shows real-time information about the processes running on your system.
+
+.TP
+.B sysopctl logs analyze
+Displays the latest critical system log entries.
+
+.TP
+.B sysopctl backup /home/user/
+Backs up files from the `/home/user/` directory to the backup location.
+
+.SH AUTHOR
+By Prabhat Kumar (prabhatkumar.cse@gmail.com). 
+
+.SH VERSION
+sysopctl v0.1.0
